@@ -6,28 +6,35 @@
  *     - Think ahead: what's the problem with doing it this way?
  */
 
-export default function Contacto(){
+export default function Contacto(props){
+
+    const {img, name, phone, email} = props
+
+    console.log(img)
+
+    console.log(props)
+
     return(
         <div className="contacts">
             <article className="contact-card">
                 <img 
-                    src="src/images/mr-whiskerson.png"
+                    src={props.img}
                     alt="Photo of Mr. Whiskerson"
                 />
-                <h3>Mr. Whiskerson</h3>
+                <h3>{props.name}</h3>
                 <div className="info-group">
                     <img 
                         src="src/images/phone-icon.png" 
                         alt="phone icon" 
                     />
-                    <p>(212) 555-1234</p>
+                    <p>{props.phone}</p>
                 </div>
                 <div className="info-group">
                     <img 
                         src="src/images/mail-icon.png" 
                         alt="mail icon"
                     />
-                    <p>mr.whiskaz@catnap.meow</p>
+                    <p>{props.email}</p>
                 </div>
             </article>
         </div>
