@@ -1,5 +1,5 @@
 import Joke from "./Joke"
-import jokesData from "./data.js"
+import jokesData from "./jokesData.js"
 
 
 export default function App() {
